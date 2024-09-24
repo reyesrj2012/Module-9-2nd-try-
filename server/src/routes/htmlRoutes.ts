@@ -6,8 +6,11 @@ const __dirname = path.dirname(__filename);
 const router = Router();
 
 // TODO: Define route to serve index.html
-router.get('/', (req:any, res:any)=>{
-    res.send('works!')
-})
+r//outer.get('/', (req:any, res:any)=>{
+//    const fullPath= __dirname + __filename
+//    readFile(fullPath, 'utf-8'(err, data) =>{
+//        data}
+//    res.send()
+//})
 
 export default router;
