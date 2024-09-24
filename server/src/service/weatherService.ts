@@ -24,10 +24,24 @@ class Weather {
 // TODO: Complete the WeatherService class
 class WeatherService {
   // TODO: Define the baseURL, API key, and city name properties
+  baseURL:string
+  APIKey: string
+  city: string
+
+  constructor(baseURL: string, APIKey: string, city: string){
+  this.baseURL = baseURL
+  this.APIKey = APIKey 
+  this.city = city
+}
   // TODO: Create fetchLocationData method
-  // private async fetchLocationData(query: string) {}
+
+   public async fetchLocationData(query: string) {
+    const resuLt = await fetch (this.baseURL) ?? 
+    }
   // TODO: Create destructureLocationData method
-  // private destructureLocationData(locationData: Coordinates): Coordinates {}
+   private destructureLocationData(locationData: Coordinates): Coordinates {
+
+   }
   // TODO: Create buildGeocodeQuery method
   // private buildGeocodeQuery(): string {}
   // TODO: Create buildWeatherQuery method
@@ -41,7 +55,9 @@ class WeatherService {
   // TODO: Complete buildForecastArray method
   // private buildForecastArray(currentWeather: Weather, weatherData: any[]) {}
   // TODO: Complete getWeatherForCity method
-  // async getWeatherForCity(city: string) {}
-}
+   async getWeatherForCity(city: string) {
+  const URL =`${this.baseURL}?q=${city}&appid=${this.APIKey}`
+   }
+  }
 
 export default new WeatherService();
